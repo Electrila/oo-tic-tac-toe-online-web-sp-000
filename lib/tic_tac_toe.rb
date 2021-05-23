@@ -80,7 +80,8 @@ class TicTacToe
   end
   
   def full?
-    if 
+    @board.all? { |index| index == "X" || index == "O" }
+  end
 
 
 end
