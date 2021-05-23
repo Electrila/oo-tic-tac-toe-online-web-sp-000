@@ -24,7 +24,7 @@ class TicTacToe
   end
   
   def input_to_index(input)
-    input = input.to_i
+    input.chomp! = input.to_i
     index = input - 1
     index
   end
@@ -59,6 +59,7 @@ class TicTacToe
   
   def turn(input)
     puts "Please choose 1 - 9"
+    input.chomp!
     index = input_to_index(input)
     if valid_move?(index)
       move(index)
