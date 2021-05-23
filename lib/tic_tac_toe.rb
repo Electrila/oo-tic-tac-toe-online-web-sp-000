@@ -57,16 +57,16 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
   
-  def turn(input)
+  def turn
     puts "Please choose 1 - 9"
-    input.chomp!
+    input = gets.chomp!
     index = input_to_index(input)
     if valid_move?(index)
       player = current_player
       move(index, player)
       display_board
     else
-      turn(input)
+      turn
     end
   end
 
