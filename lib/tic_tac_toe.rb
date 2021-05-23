@@ -90,6 +90,19 @@ class TicTacToe
   def over?
     draw? || won?
   end
+  
+  def winner
+    index = won?
+    if index == false
+      nil
+    else
+      if @board[index[0]] == "X"
+        "X"
+      else
+        "O"
+      end
+    end
+  end
 
 
 end
